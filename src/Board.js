@@ -33,8 +33,10 @@ class Board extends Component {
 
   constructor(props) {
     super(props);
-
-    // TODO: set initial state
+    this.state = {
+      hasWon: true,
+      board: ,
+    }
   }
 
   /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
@@ -42,6 +44,13 @@ class Board extends Component {
   createBoard() {
     let board = [];
     // TODO: create array-of-arrays of true/false values
+     for(let i = 0; i < nrows; i++) {
+      let row = []
+      for(let j = 0; j < ncols; j++) {
+        row.push(Math.round(Math.random()))
+      }
+      board.push(row);
+    }
     return board
   }
 
